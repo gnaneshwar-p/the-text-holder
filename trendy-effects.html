@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the text holder</title>
+</head>
+<body>
+    <div class="myInputs">
+        <input type="text" placeholder="Placeholder Text" required>
+        <span class="focus-border"></span>
+    </div>
+
+    <style>
+    *{
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .myInputs{
+        position: relative;
+    }
+
+    input{
+        width: 25rem;
+        height: 4rem;
+        padding: 0 15px;
+        font-size: 23px;
+        border: 0;
+        border-bottom: 4px solid rgb(206, 206, 206);
+        outline: none;
+        color: black;
+        font-family: sans-serif;
+        background: rgb(241, 241, 241);
+        border-radius: .3rem;
+    }
+
+    .focus-border{
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 4px;
+        background: rgb(255, 84, 121);
+        left: 0;
+        bottom: 0;
+        border-radius: 10px;
+        transition: all .3s;
+    }
+
+    input:focus ~ .focus-border{
+        width: 100%;
+    }
+
+    </style>
+</body>
+</html>
